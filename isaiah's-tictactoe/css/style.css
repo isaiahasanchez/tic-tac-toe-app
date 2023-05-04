@@ -1,0 +1,70 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+:root {
+  --green: #105f2b;
+  --winning-blocks: #2d414b;
+  --draw-indicator: red;
+}
+
+body {
+  color: var(--green);
+  /* border: black solid 3px; */
+  background-color: rgb(143, 198, 169);
+}
+
+.container{
+  font-family: 'Permanent Marker', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+#gameboard {
+  display: flex;
+  flex-wrap: wrap;
+  width: 450px;
+  margin-top: 40px;
+}
+
+.cell {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  color: var(--green);
+  border-right: black solid 2px;
+  border-bottom: black solid 2px;
+  font-size: 55px;
+}
+
+.cell:nth-child(3n) {
+  border-right: none;
+}
+
+.cell:nth-child(6) ~ .cell {
+  border-bottom: none;
+}
+
+.status {
+  font-size: 33px;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
